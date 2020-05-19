@@ -1,0 +1,6 @@
+fstNum = int(input("First Number :"))
+sndNum = int(input("Second Number :"))
+print(fstNum, "+", sndNum, "=", fstNum + sndNum)
+print(fstNum, "-", sndNum, "=", fstNum - sndNum)
+print(fstNum, "*", sndNum, "=", fstNum * sndNum)
+print(fstNum, "/", sndNum, "=", fstNum / sndNum)
