@@ -26,7 +26,6 @@ while True:
                 print(i+")")
             a += 1
     else:
-        global value
         value = int(input("How many "+menuName.capitalize()+" do you want?"))
         menuList.append([menuName, (dictMenuList[menuName])*value])
         valueList.append(value)
