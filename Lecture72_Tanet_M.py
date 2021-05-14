@@ -1,20 +1,21 @@
-menuList = []
-totalPrice = 0
+listOrderprice = []
 
-def showbill():
-    print("My Food".center(21, "="))
-    for i in range(len(menuList)):
-        print(menuList[i][0], menuList[i][1], "THB")
-        global totalPrice
-        totalPrice += menuList[i][1]
+def showBill():
+    x = 0
+    print("Food".center(10, "-"))
+    for i in range(len(listOrderprice)):
+        print(listOrderprice[i][0], listOrderprice[i][1])
+        x += listOrderprice[i][1]
+    print("Total is", x, "THB, Please.")
 
 while True:
-    menuName = input("Enter menu : ")
-    if menuName.lower() == "exit":
-        break
+    nameFood = input("What would you like?(Type 'Exit' if you done.)")
+    list = []
+    if nameFood.capitalize() != "Exit":
+        list.append(nameFood)
+        list.append(int(input("How much is "+nameFood+"?")))
+        listOrderprice.append(list)
     else:
-        menuPrice = int(input("Price : "))
-        menuList.append([menuName, menuPrice])
+        break
 
-showbill()
-print(totalPrice, "THB in total.")
+showBill()
