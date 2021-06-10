@@ -1,0 +1,5 @@
+friendNickname, favMovie, favPet
+Poo, HarryPotter, Shiwawa
+Aom, BikeMan, Bird
+Te, Avenger, Cat
+Bim, ATM, Cat
