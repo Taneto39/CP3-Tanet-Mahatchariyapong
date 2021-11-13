@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Borntodev_Devlab/.idea/Borntodev_Devlab.iml" filepath="$PROJECT_DIR$/../Borntodev_Devlab/.idea/Borntodev_Devlab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CP3-Tanet-Mahatchariyapong.iml" filepath="$PROJECT_DIR$/.idea/CP3-Tanet-Mahatchariyapong.iml" />
     </modules>
   </component>
