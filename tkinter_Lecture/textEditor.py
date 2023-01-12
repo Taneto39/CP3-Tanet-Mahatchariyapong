@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter.filedialog import askopenfilename
+from tkinter.filedialog import askopenfilename, asksaveasfilename
 
 
 def open_file():
@@ -15,6 +15,19 @@ def open_file():
     window.title(f'Text Editor - {filepath}')
 
 
+def save_file():
+    filepath = asksaveasfilename(
+        defaultextension='.txt',
+        filetypes=[('Text Files', '*.txt'), ('All Files', '*.*')]
+    )
+    if not filepath:
+        return
+    with open(filepath, mode='w', encoding='utf-8') as output_file:
+        text = txt_edit.get('1.0', tk.END)
+        output_file.write(text)
+    window.title(f'Text Editor - {filepath}')
+
+
 window = tk.Tk()
 window.title('Text Editor')
 window.rowconfigure([0], minsize=100, weight=1)
@@ -25,7 +38,7 @@ frm_buttons.grid(row=0, column=0, sticky='ns')
 
 btn_open = tk.Button(master=frm_buttons, text='OPEN', command=open_file)
 btn_open.grid(row=0, column=0, padx=5, pady=5, sticky='ew')
-btn_save = tk.Button(master=frm_buttons, text='Save As')
+btn_save = tk.Button(master=frm_buttons, text='Save As', command=save_file)
 btn_save.grid(row=1, column=0, padx=5, sticky='ew')
 
 txt_edit = tk.Text(master=window)
